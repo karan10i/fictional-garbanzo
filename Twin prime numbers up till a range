@@ -1,0 +1,37 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+int count_digit(int number) {
+   return int(log10(number) + 1);
+   }
+
+int main(){
+    int a,p=0;
+    int arr[20];
+    cin>>a;
+    for(int i=1;i<a;i++){
+        int k=0;
+        for(int j=1;j<=i;j++){
+            if(i%j==0){
+                ++k;
+            }
+           
+        }
+        if(k==2){
+            arr[p]=i;
+            p++;
+        }
+        else{
+            continue;
+        }
+    }
+    for(int i=0;i<p;i++){
+        if(arr[i]+2==arr[i+1]){
+            cout<<arr[i]<<" and "<<arr[i+1]<<" are twin prime no"<<endl;
+            ++i;
+        }
+    }
+
+    return 0;
+}
