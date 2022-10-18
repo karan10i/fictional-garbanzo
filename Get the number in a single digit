@@ -1,0 +1,27 @@
+#include <iostream>
+#include <math.h>
+#include <algorithm>
+using namespace std;
+
+ 
+int main(){
+  int a,t,p=0,o=0;
+  cin>>a;
+  t=a;
+  while(t>0){
+    int r;
+    r=t%10;
+    p=p+r;
+   
+    t=t/10;
+  }
+  while(true){
+      o=o+p%10;
+      p=p/10;
+      if(p==0){
+        break;
+      }
+  }
+  cout<<o<<endl;
+    return 0;
+}
