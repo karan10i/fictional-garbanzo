@@ -1,0 +1,37 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main(){
+  int a,range,arr[20],t,r,i,j,s,n;
+  cout<<"Enter no. of number for combinations: ";
+  cin>>a;
+    cout<<"Enter numbers for combination: ";
+  for(int i=0;i<a;i++){
+    cin>>arr[i];
+  }
+  cout<<"Enter Range: ";
+    cin>>range;
+    for(i=1;i<=range;i++){
+        n=i;s=0;t=0;
+        while(n>0){
+            j=0;
+            r=n%10;
+            t++;
+            while(j<a){
+                if(r==arr[j]){
+                    s++;
+                }
+                //add a else if statement just in case if the elements of array
+                //are same
+                j++;
+            }
+            n=n/10;
+        }
+        if(s==t){
+            cout<<i<<endl;
+        }
+
+    }
+
+    return 0;
+}
